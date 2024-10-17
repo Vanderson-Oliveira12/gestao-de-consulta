@@ -1,0 +1,6 @@
+@gestaoDeConsulta_HostAddress = http://localhost:5082
+
+GET {{gestaoDeConsulta_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
