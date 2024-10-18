@@ -11,5 +11,15 @@ namespace gestaoDeConsulta.Context
             
         }
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Specialty> Specialtys { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<Specialty>()
+                .HasMany(s => s.Doctors)
+                .WithMany(d => d.Specialtys);
+        }
     }
 }

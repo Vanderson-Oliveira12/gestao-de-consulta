@@ -9,7 +9,245 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[gestaoDeConsulta.DTOs.PatientDTO, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[gestaoDeConsulta.DTOs.PatientDTO, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.PatientController",
+    "Method": "CreatePatient",
+    "RelativePath": "api/patients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPatientDTO",
+        "Type": "gestaoDeConsulta.DTOs.CreatePatientDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[gestaoDeConsulta.DTOs.CreatePatientDTO, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.PatientController",
+    "Method": "GetPatientById",
+    "RelativePath": "api/patients/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[gestaoDeConsulta.DTOs.PatientDTO, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.PatientController",
+    "Method": "UpdatePatient",
+    "RelativePath": "api/patients/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatePatientDTO",
+        "Type": "gestaoDeConsulta.DTOs.UpdatePatientDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.DTOs.UpdatePatientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.PatientController",
+    "Method": "DeletePatient",
+    "RelativePath": "api/patients/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.SpecialtyController",
+    "Method": "GetAllSpecialty",
+    "RelativePath": "api/specialties",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[gestaoDeConsulta.Models.Specialty, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.SpecialtyController",
+    "Method": "CreateSpecialty",
+    "RelativePath": "api/specialties",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createSpecialtyDTO",
+        "Type": "gestaoDeConsulta.DTOs.CreateSpecialtyDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[gestaoDeConsulta.DTOs.CreateSpecialtyDTO, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.SpecialtyController",
+    "Method": "GetSpecialtyById",
+    "RelativePath": "api/specialties/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.DTOs.SpecialtyDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.SpecialtyController",
+    "Method": "UpdateSpecialty",
+    "RelativePath": "api/specialties/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateSpecialtyDTO",
+        "Type": "gestaoDeConsulta.DTOs.UpdateSpecialtyDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[gestaoDeConsulta.DTOs.UpdateSpecialtyDTO, gestaoDeConsulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "gestaoDeConsulta.Controllers.SpecialtyController",
+    "Method": "DeleteSpecialty",
+    "RelativePath": "api/specialties/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "gestaoDeConsulta.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

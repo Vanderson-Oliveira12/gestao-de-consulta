@@ -34,7 +34,8 @@ namespace gestaoDeConsulta.Repositories
 
         public async Task<T> UpdateAsync(T model)
         {
-            _context.Entry(model).State = EntityState.Modified;
+
+            _context.Set<T>().Update(model);
 
             await _context.SaveChangesAsync();
 

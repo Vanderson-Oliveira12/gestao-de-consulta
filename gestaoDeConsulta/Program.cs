@@ -1,5 +1,6 @@
 using gestaoDeConsulta.Context;
 using gestaoDeConsulta.Mappings;
+using gestaoDeConsulta.Middlewares;
 using gestaoDeConsulta.Repositories;
 using gestaoDeConsulta.Repositories.Interface;
 using gestaoDeConsulta.Services;
@@ -21,8 +22,10 @@ var myConnection = builder.Configuration.GetConnectionString("connectionDb");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(myConnection, ServerVersion.AutoDetect(myConnection)));
 
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+builder.Services.AddScoped<ISpecialtyRepository, SpecialtyRepository>();
 
 builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
@@ -40,5 +43,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<HandleGlobalExceptionsMiddleware>();
 
 app.Run();

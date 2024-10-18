@@ -1,14 +1,15 @@
 ﻿using gestaoDeConsulta.DTOs;
+using gestaoDeConsulta.Models;
 
 namespace gestaoDeConsulta.Services.Interfaces
 {
     public interface IPatientService
     {
-        Task<IEnumerable<PatientDTO>> GetAllAsync();
-        Task<PatientDTO> GetByIdAsync(Guid id);
-        Task<PatientDTO> CreateAsync(PatientDTO model);
-        Task<PatientDTO> UpdateAsync(PatientDTO model);
-        Task DeleteAsync(Guid id);
+        Task<ApiResponse<IEnumerable<PatientDTO>>> GetAllAsync();
+        Task<ApiResponse<PatientDTO>> GetByIdAsync(Guid id);
+        Task<ApiResponse<CreatePatientDTO>> CreateAsync(CreatePatientDTO model);
+        Task<ApiResponse<UpdatePatientDTO>> UpdateAsync(Guid id, UpdatePatientDTO model);
+        Task<ApiResponse<bool>> DeleteAsync(Guid id);
 
     }
 }

@@ -24,5 +24,27 @@ namespace gestaoDeConsulta.Models
             Phone = phone;
             Email = email;
         }
+        public void ChangeCPF(string cPF) {
+            CPF = cPF;
+        }
+
+        public void ChangeName(string name)
+        {
+            Name = name;
+        }
+
+        public void changeDateOfBirth(DateTime date)
+        {
+            DateOfBirth = date;
+        }
+        public void ChangeAddress(string address)
+        {
+            Address = address;
+        }
+        public void ChangePhone(string phone)
+        {
+            Phone = phone;
+        }
+
     }
 }
